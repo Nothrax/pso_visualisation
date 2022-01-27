@@ -29,10 +29,10 @@ You can set:
 | [Levy N.13](https://www.sfu.ca/~ssurjano/levy13.html) |  0 | \[1,1\]  | \<-10,10\>  |  \<-10,10\> |
 | [Michalewicz](https://www.sfu.ca/~ssurjano/michal.html) |  -1.8013 | \[2.20,1.57\]  | \<-4,4\>  |  \<-4,4\> |
 | [Schaffer N.2](https://www.sfu.ca/~ssurjano/schaffer2.html) |  0 | \[0,0\]  | \<-10,10\>  |  \<-10,10\> |
-| [Schaffer N.4](https://www.sfu.ca/~ssurjano/schaffer2.html) |  0.292579 | \[0,0\]  | \<-50,50\>  |  \<-50,50\> |
-| [Six-Hump Camel](https://www.sfu.ca/~ssurjano/schaffer2.html) |  -1.0316 | \[+-0.0989,+-0.7126\]  | \<-2,2\>  |  \<-1,1\> |
-| [Sphere](https://www.sfu.ca/~ssurjano/schaffer2.html) |  0.0 | \[0,0\]  | \<-6,6\>  |  \<-6,6\> |
-| [Styblinsky-Tang](https://www.sfu.ca/~ssurjano/schaffer2.html) |  -78.3319 | \[-2.9035,-2.9035\]  | \<-5,5\>  |  \<-5,5\> |
+| [Schaffer N.4](https://www.sfu.ca/~ssurjano/schaffer4.html) |  0.292579 | \[0,0\]  | \<-50,50\>  |  \<-50,50\> |
+| [Six-Hump Camel](https://www.sfu.ca/~ssurjano/camel6.html) |  -1.0316 | \[+-0.0989,+-0.7126\]  | \<-2,2\>  |  \<-1,1\> |
+| [Sphere](https://www.sfu.ca/~ssurjano/spheref.html) |  0.0 | \[0,0\]  | \<-6,6\>  |  \<-6,6\> |
+| [Styblinsky-Tang](https://www.sfu.ca/~ssurjano/stybtang.html) |  -78.3319 | \[-2.9035,-2.9035\]  | \<-5,5\>  |  \<-5,5\> |
 
 
 ## Dependencies
