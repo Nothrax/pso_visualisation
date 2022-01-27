@@ -1,6 +1,6 @@
 # Particle swarm optimization algorithm visualisation 
 This project serves as visualisation tool for particle swarm optimization algorithm. Project implements multiple functions that can be used to visualise how particles move in order to find a global minima of the function. 
-[SPSO 2006](https://hal.archives-ouvertes.fr/hal-00764996/document) version of PSO algorithm is implemented in this tool.
+[SPSO 2006](https://hal.archives-ouvertes.fr/hal-00764996/document) version of PSO algorithm is implemented in this tool. Qt Library [QCustomPlot](https://www.qcustomplot.com/) is used for plotting graphs.
 
 ## Usage
 Picture of gui:
@@ -37,7 +37,7 @@ You can set:
 
 ## Dependencies
 * cmake >= 3.20
-* QT5 >= 5.15
+* Qt5 >= 5.15
 
 ## Linux compilation
 ```
