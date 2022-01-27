@@ -1,0 +1,27 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.20)
+PROJECT(PSOgui)
+
+SET(CMAKE_CXX_STANDARD 17)
+
+SET(CMAKE_AUTOMOC ON)
+SET(CMAKE_AUTORCC ON)
+SET(CMAKE_AUTOUIC ON)
+
+if(WIN32)
+    set(CMAKE_WIN32_EXECUTABLE ON)
+endif()
+
+FIND_PACKAGE(Qt5 COMPONENTS Widgets REQUIRED)
+SET(QT5_MODULES Widgets PrintSupport)
+FIND_PACKAGE(Qt5 REQUIRED COMPONENTS ${QT5_MODULES})
+
+ADD_LIBRARY(qcustomplot STATIC libs/qcustomplot/qcustomplot.cpp libs/qcustomplot/qcustomplot.h)
+TARGET_LINK_LIBRARIES(qcustomplot PUBLIC Qt5::Widgets Qt5::PrintSupport)
+
+FILE(GLOB_RECURSE source_files "source/*")
+ADD_LIBRARY(pso_lib STATIC ${source_files})
+TARGET_INCLUDE_DIRECTORIES(pso_lib PUBLIC "include/")
+
+ADD_EXECUTABLE(PSOgui main.cpp MainWindow.cpp MainWindow.h)
+TARGET_LINK_LIBRARIES(PSOgui pso_lib qcustomplot)
+TARGET_INCLUDE_DIRECTORIES(pso_lib PUBLIC libs)
