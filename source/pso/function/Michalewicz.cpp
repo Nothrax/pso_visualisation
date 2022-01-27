@@ -1,8 +1,8 @@
 #include <pso/function/Michalewicz.h>
 
 double Michalewicz::calculateFitness(Point point) {
-    return (sin(point.x) * pow(sin((1 * point.x * point.x) / M_PI), 20)) +
-           (sin(point.y) * pow(sin((2 * point.y * point.y) / M_PI), 20));
+    return (sin(point.x) * pow(sin((1 * point.x * point.x) / _pi), 20)) +
+           (sin(point.y) * pow(sin((2 * point.y * point.y) / _pi), 20));
 }
 
 double Michalewicz::getMinFitness() {

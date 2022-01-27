@@ -2,7 +2,7 @@
 
 double Easom::calculateFitness(Point point) {
     return -cos(point.x) * cos(point.y) *
-           exp(-(point.x - M_PI) * (point.x - M_PI) - (point.y - M_PI) * (point.y - M_PI));
+           exp(-(point.x - _pi) * (point.x - _pi) - (point.y - _pi) * (point.y - _pi));
 }
 
 double Easom::getMinFitness() {

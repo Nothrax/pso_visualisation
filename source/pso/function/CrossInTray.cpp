@@ -1,7 +1,7 @@
 #include <pso/function/CrossInTray.h>
 
 double CrossInTray::calculateFitness(Point point) {
-    return -0.0001 * pow(fabs(sin(point.x) * sin(point.y) * exp(fabs(100 - (sqrt(point.x * point.x + point.y * point.y)) / M_PI))) + 1, 0.1);
+    return -0.0001 * pow(fabs(sin(point.x) * sin(point.y) * exp(fabs(100 - (sqrt(point.x * point.x + point.y * point.y)) / _pi))) + 1, 0.1);
 }
 
 Point CrossInTray::getBoundary() {

@@ -36,4 +36,6 @@ public:
     virtual Point getBoundary();
 
 protected:
+    const double _pi{3.14159265358979323846};
+    const double _e{2.71828182845904523536};
 };

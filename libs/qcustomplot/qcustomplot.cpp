@@ -6739,7 +6739,7 @@ QVector<double> QCPAxisTickerText::createTickVector(double tickStep, const QCPRa
 */
 QCPAxisTickerPi::QCPAxisTickerPi() :
   mPiSymbol(QLatin1String(" ")+QChar(0x03C0)),
-  mPiValue(M_PI),
+  mPiValue(3.14159265358979323846),
   mPeriodicity(0),
   mFractionStyle(fsUnicodeFractions),
   mPiTickStep(0)
@@ -9720,7 +9720,7 @@ QPointF QCPAxisPainterPrivate::getTickLabelDrawOffset(const TickLabelData &label
   */
   bool doRotation = !qFuzzyIsNull(tickLabelRotation);
   bool flip = qFuzzyCompare(qAbs(tickLabelRotation), 90.0); // perfect +/-90 degree flip. Indicates vertical label centering on vertical axes.
-  double radians = tickLabelRotation/180.0*M_PI;
+  double radians = tickLabelRotation/180.0*3.14159265358979323846;
   int x=0, y=0;
   if ((type == QCPAxis::atLeft && tickLabelSide == QCPAxis::lsOutside) || (type == QCPAxis::atRight && tickLabelSide == QCPAxis::lsInside)) // Anchor at right side of tick label
   {
@@ -16595,14 +16595,14 @@ void QCPSelectionDecoratorBracket::drawDecoration(QCPPainter *painter, QCPDataSe
       painter->setPen(mBracketPen);
       painter->setBrush(mBracketBrush);
       painter->translate(openBracketPos);
-      painter->rotate(openBracketAngle/M_PI*180.0);
+      painter->rotate(openBracketAngle/3.14159265358979323846*180.0);
       drawBracket(painter, openBracketDir);
       painter->setTransform(oldTransform);
       // draw closing bracket:
       painter->setPen(mBracketPen);
       painter->setBrush(mBracketBrush);
       painter->translate(closeBracketPos);
-      painter->rotate(closeBracketAngle/M_PI*180.0);
+      painter->rotate(closeBracketAngle/3.14159265358979323846*180.0);
       drawBracket(painter, closeBracketDir);
       painter->setTransform(oldTransform);
     }
@@ -28621,9 +28621,9 @@ void QCPItemCurve::draw(QCPPainter *painter)
     painter->drawPath(cubicPath);
     painter->setBrush(Qt::SolidPattern);
     if (mTail.style() != QCPLineEnding::esNone)
-      mTail.draw(painter, startVec, M_PI-cubicPath.angleAtPercent(0)/180.0*M_PI);
+      mTail.draw(painter, startVec, 3.14159265358979323846-cubicPath.angleAtPercent(0)/180.0*3.14159265358979323846);
     if (mHead.style() != QCPLineEnding::esNone)
-      mHead.draw(painter, endVec, -cubicPath.angleAtPercent(1)/180.0*M_PI);
+      mHead.draw(painter, endVec, -cubicPath.angleAtPercent(1)/180.0*3.14159265358979323846);
   }
 }
 
